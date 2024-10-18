@@ -32,6 +32,8 @@ while True:
     faces = face_detector.detect_faces(frame)
     for (x, y, w, h) in faces:
         distance = calculate_distance(w, focal_length, actual_width)
+        # Draw rectangle around detected face
+        cv2.rectangle(frame, (x, y), (x+w, y+h), (255, 0, 0), 2)
         # Display the calculated distance on the frame
         cv2.putText(frame, f"Distance: {distance:.2f} cm", (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 1)
 
@@ -45,4 +47,3 @@ while True:
 # Clean up: release the camera and close all OpenCV windows
 camera.release()
 cv2.destroyAllWindows()
-
