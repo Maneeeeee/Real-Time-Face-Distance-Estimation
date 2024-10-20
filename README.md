@@ -21,7 +21,7 @@ Ensure you have the following installed:
 1. **Clone this repository**:
     ```bash
     git clone https://github.com/Maneeeeee/Real-Time-Face-Distance-Estimation
-    cd face_detection
+    cd Real-Time-Face-Distance-Estimation
     ```
 
 2. **Install the required Python packages**:
